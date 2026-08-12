@@ -1,0 +1,21 @@
+.waiter-layout {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.waiter-main {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  min-height: 100vh;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 800px) {
+  .waiter-main {
+    margin-left: 210px;
+    width: calc(100% - 210px);
+    padding: 18px;
+  }
+}

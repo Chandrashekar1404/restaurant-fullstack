@@ -1,0 +1,149 @@
+.chef-special{
+    padding:90px 7%;
+    background:#f8f8f8;
+}
+
+.chef-heading{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.chef-heading span{
+    color:#3c7c22;
+    font-weight:600;
+    font-size:18px;
+}
+
+.chef-heading h2{
+    font-size:42px;
+    margin:15px 0;
+    color:#222;
+}
+
+.chef-heading p{
+    color:#666;
+    font-size:17px;
+}
+
+.chef-container{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+
+.chef-card{
+    display:flex;
+    align-items:center;
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.chef-card:hover{
+    transform:translateY(-8px);
+}
+
+.chef-image{
+    flex:1;
+    position:relative;
+}
+
+.chef-image img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.chef-badge{
+    position:absolute;
+    top:20px;
+    left:20px;
+
+    background:#ff9800;
+    color:white;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:14px;
+}
+
+.chef-info{
+    flex:1;
+    padding:40px;
+}
+
+.chef-info h3{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.chef-rating{
+    color:#ff9800;
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+.chef-info p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.chef-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.chef-bottom h4{
+    font-size:32px;
+    color:#3c7c22;
+}
+
+.chef-bottom button{
+    background:#3c7c22;
+    color:white;
+    border:none;
+    padding:14px 28px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.chef-bottom button:hover{
+    background:#2b5c19;
+}
+
+@media(max-width:900px){
+
+.chef-card{
+    flex-direction:column;
+}
+
+.chef-image img{
+    height:250px;
+}
+
+.chef-info{
+    padding:25px;
+}
+
+.chef-info h3{
+    font-size:28px;
+}
+
+.chef-bottom{
+    flex-direction:column;
+    gap:20px;
+}
+
+.chef-bottom button{
+    width:100%;
+}
+
+}

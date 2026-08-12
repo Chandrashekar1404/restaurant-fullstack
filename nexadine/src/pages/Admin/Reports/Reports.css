@@ -1,0 +1,128 @@
+/* ===========================
+   Reports Page
+=========================== */
+
+.reports {
+    padding: 30px;
+    background: #f5f7fb;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Heading */
+
+.reports h1 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 30px;
+}
+
+/* Cards */
+
+.report-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.report-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.report-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.15);
+}
+
+.report-card h2 {
+    color: #ff6b00;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.report-card h3 {
+    color: #333;
+    font-size: 30px;
+}
+
+/* Report Table */
+
+.report-table {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.reports table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.reports thead {
+    background: #ff6b00;
+    color: white;
+}
+
+.reports thead th {
+    padding: 15px;
+    text-align: left;
+}
+
+.reports tbody td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.reports tbody tr:hover {
+    background: #fff7f2;
+}
+
+/* Buttons */
+
+.export-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: .3s;
+}
+
+.export-btn:hover {
+    background: #218838;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.reports{
+    padding:15px;
+}
+
+.report-cards{
+    grid-template-columns:1fr;
+}
+
+.report-table{
+    overflow-x:auto;
+}
+
+.reports table{
+    min-width:800px;
+}
+
+.export-btn{
+    width:100%;
+}
+
+}

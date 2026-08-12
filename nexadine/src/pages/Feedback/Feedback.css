@@ -1,0 +1,316 @@
+/* /* /* /* /* /* .feedback-page {
+  min-height: 100vh;
+  background: #f8f9fb;
+  padding-bottom: 70px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.feedback-hero {
+  background: linear-gradient(
+    135deg,
+    #111827,
+    #1f2937
+  );
+
+  padding: 65px 8%;
+  color: white;
+}
+
+.feedback-small-title {
+  color: #f59e0b;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.feedback-hero h1 {
+  margin: 0;
+  font-size: 46px;
+  font-weight: 800;
+}
+
+.feedback-hero h1 span {
+  color: #f59e0b;
+}
+
+.feedback-hero p:last-child {
+  max-width: 650px;
+  margin-top: 18px;
+  color: #d1d5db;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.feedback-container {
+  max-width: 1100px;
+  margin: -35px auto 0;
+  padding: 0 25px;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 25px;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.feedback-card {
+  background: white;
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.feedback-heading {
+  margin-bottom: 28px;
+}
+
+.feedback-heading h2 {
+  margin: 0 0 8px;
+  font-size: 27px;
+  color: #111827;
+}
+
+.feedback-heading p {
+  margin: 0;
+  color: #6b7280;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.feedback-input-group {
+  margin-bottom: 22px;
+}
+
+.feedback-input-group label,
+.rating-section > label {
+  display: block;
+  margin-bottom: 9px;
+  color: #374151;
+  font-weight: 600;
+}
+
+.feedback-input-group input,
+.feedback-input-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+
+  padding: 13px 15px;
+
+  font-size: 15px;
+  font-family: inherit;
+
+  outline: none;
+  transition: 0.2s;
+}
+
+.feedback-input-group input:focus,
+.feedback-input-group textarea:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.12);
+}
+
+.feedback-input-group textarea {
+  resize: vertical;
+}
+
+/* =========================
+   RATING
+========================= */
+
+.rating-section {
+  margin-bottom: 25px;
+}
+
+.stars {
+  display: flex;
+  gap: 6px;
+}
+
+.star {
+  border: none;
+  background: transparent;
+
+  font-size: 36px;
+  color: #d1d5db;
+
+  cursor: pointer;
+
+  padding: 0;
+
+  transition:
+    transform 0.15s,
+    color 0.15s;
+}
+
+.star:hover {
+  transform: scale(1.15);
+}
+
+.star.active {
+  color: #f59e0b;
+}
+
+.rating-text {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =========================
+   SUBMIT
+========================= */
+
+.feedback-submit {
+  width: 100%;
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 15px;
+
+  background: #f59e0b;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.feedback-submit:hover {
+  background: #d97706;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   SIDE CARD
+========================= */
+
+.feedback-side {
+  background: #111827;
+  color: white;
+
+  border-radius: 18px;
+
+  padding: 40px 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.feedback-icon {
+  width: 75px;
+  height: 75px;
+
+  border-radius: 50%;
+
+  background: rgba(245, 158, 11, 0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 35px;
+
+  margin-bottom: 20px;
+}
+
+.feedback-side h3 {
+  font-size: 25px;
+  margin: 0 0 12px;
+}
+
+.feedback-side > p {
+  color: #d1d5db;
+  line-height: 1.7;
+  max-width: 350px;
+}
+
+/* =========================
+   BENEFITS
+========================= */
+
+.feedback-benefits {
+  width: 100%;
+  margin-top: 25px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feedback-benefits div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  padding: 12px 15px;
+
+  border-radius: 10px;
+}
+
+.feedback-benefits span {
+  font-size: 23px;
+}
+
+.feedback-benefits p {
+  margin: 0;
+  color: #e5e7eb;
+  font-weight: 600;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .feedback-hero {
+    padding: 45px 25px;
+  }
+
+  .feedback-hero h1 {
+    font-size: 34px;
+  }
+
+  .feedback-container {
+    grid-template-columns: 1fr;
+    margin-top: -20px;
+  }
+
+  .feedback-card {
+    padding: 25px;
+  }
+
+  .feedback-side {
+    padding: 35px 25px;
+  }
+}    

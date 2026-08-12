@@ -1,0 +1,27 @@
+.menu-page{
+    width:100%;
+    min-height:100vh;
+    padding:40px;
+    background:#f7f7f7;
+}
+
+.menu-hero{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.menu-hero h1{
+    font-size:42px;
+    color:#222;
+    margin-bottom:10px;
+}
+
+.menu-hero p{
+    font-size:18px;
+    color:#666;
+}
+
+.items-count{
+    margin:25px 0;
+    color:#444;
+}

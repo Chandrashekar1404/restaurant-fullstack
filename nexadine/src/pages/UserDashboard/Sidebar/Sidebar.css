@@ -1,0 +1,43 @@
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    color: #000 !important;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.sidebar ul li span {
+    color: #000 !important;
+}
+
+.sidebar ul li svg {
+    color: #000 !important;
+    font-size: 18px;
+}
+
+/* Hover */
+.sidebar ul li:hover {
+    background: #ff6b00;
+}
+
+.sidebar ul li:hover span,
+.sidebar ul li:hover svg,
+.sidebar ul li:hover {
+    color: #fff !important;
+}
+
+/* Active */
+.sidebar ul li.active {
+    background: #ff6b00;
+}
+
+.sidebar ul li.active span,
+.sidebar ul li.active svg,
+.sidebar ul li.active {
+    color: #fff !important;
+}

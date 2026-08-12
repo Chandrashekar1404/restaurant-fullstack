@@ -1,0 +1,30 @@
+.profile{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px;
+}
+
+.profile-card{
+    width:350px;
+    text-align:center;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.profile-card img{
+    width:120px;
+    border-radius:50%;
+}
+
+.profile-card button{
+    margin-top:20px;
+    padding:10px 25px;
+    border:none;
+    background:#ff9800;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}

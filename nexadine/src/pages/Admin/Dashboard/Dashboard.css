@@ -1,0 +1,543 @@
+/* ===================================
+   ADMIN DASHBOARD MAIN LAYOUT
+=================================== */
+
+.admin-dashboard {
+
+  display:flex;
+
+  min-height:100vh;
+
+  width:100%;
+
+  background:#f5f7fb;
+
+  font-family:Arial, Helvetica, sans-serif;
+
+  overflow:hidden;
+
+}
+
+
+
+/* ===================================
+   SIDEBAR
+=================================== */
+
+.sidebar {
+
+  width:260px;
+
+  min-width:260px;
+
+  height:100vh;
+
+  position:fixed;
+
+  left:0;
+
+  top:0;
+
+  background:#1f2937;
+
+  color:white;
+
+  padding:25px 15px;
+
+  overflow-y:auto;
+
+}
+
+
+/* Logo */
+
+.sidebar h2 {
+
+  text-align:center;
+
+  color:#ff6b00;
+
+  font-size:26px;
+
+  margin-bottom:35px;
+
+}
+
+
+
+/* Admin Text */
+
+.sidebar p {
+
+  text-align:center;
+
+  color:#ddd;
+
+  margin-bottom:30px;
+
+}
+
+
+
+/* Sidebar Links */
+
+.sidebar a {
+
+  display:flex;
+
+  align-items:center;
+
+  gap:15px;
+
+  width:100%;
+
+  padding:15px 18px;
+
+  margin-bottom:12px;
+
+  color:white;
+
+  text-decoration:none;
+
+  border-radius:10px;
+
+  font-size:16px;
+
+  white-space:nowrap;
+
+  transition:0.3s;
+
+}
+
+
+
+.sidebar a:hover {
+
+  background:#ff6b00;
+
+}
+
+
+
+.sidebar a.active {
+
+  background:#ff6b00;
+
+}
+
+
+
+/* ===================================
+   MAIN CONTENT
+=================================== */
+
+
+.dashboard-content {
+
+  margin-left:260px;
+
+  width:calc(100% - 260px);
+
+  height:100vh;
+
+  padding:30px;
+
+  overflow:hidden;
+
+}
+
+
+
+/* ===================================
+   HORIZONTAL PAGE CONTAINER
+=================================== */
+
+
+.dashboard-pages {
+
+  display:flex;
+
+  width:100%;
+
+  height:100%;
+
+  overflow:hidden;
+
+}
+
+
+
+/* Individual Page */
+
+.dashboard-page {
+
+  width:100%;
+
+  min-width:100%;
+
+  height:100%;
+
+  overflow-y:auto;
+
+  animation:pageSlide 0.3s ease;
+
+}
+
+
+
+@keyframes pageSlide {
+
+  from {
+
+    transform:translateX(40px);
+
+    opacity:0;
+
+  }
+
+  to {
+
+    transform:translateX(0);
+
+    opacity:1;
+
+  }
+
+}
+
+
+
+/* ===================================
+   DASHBOARD HEADER
+=================================== */
+
+
+.dashboard-header {
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:30px;
+
+}
+
+
+
+.dashboard-header h1 {
+
+  font-size:32px;
+
+  color:#222;
+
+  margin-bottom:8px;
+
+}
+
+
+
+.dashboard-header p {
+
+  color:#666;
+
+  font-size:16px;
+
+}
+
+
+
+/* ===================================
+   CARDS
+=================================== */
+
+
+.cards {
+
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+  gap:20px;
+
+}
+
+
+
+.card {
+
+  background:white;
+
+  padding:25px;
+
+  border-radius:15px;
+
+  text-align:center;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+  transition:0.3s;
+
+}
+
+
+
+.card:hover {
+
+  transform:translateY(-5px);
+
+}
+
+
+
+.card h2 {
+
+  color:#ff6b00;
+
+  font-size:30px;
+
+  margin-bottom:10px;
+
+}
+
+
+
+.card p {
+
+  color:#666;
+
+  font-size:16px;
+
+}
+
+
+
+/* ===================================
+   TABLE SECTION
+=================================== */
+
+
+.table-section {
+
+  background:white;
+
+  padding:25px;
+
+  border-radius:15px;
+
+  margin-top:30px;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+  overflow-x:auto;
+
+}
+
+
+
+.table-section h2 {
+
+  margin-bottom:20px;
+
+}
+
+
+
+table {
+
+  width:100%;
+
+  border-collapse:collapse;
+
+}
+
+
+
+thead {
+
+  background:#ff6b00;
+
+  color:white;
+
+}
+
+
+
+th,td {
+
+  padding:14px;
+
+  text-align:left;
+
+}
+
+
+
+tbody tr {
+
+  border-bottom:1px solid #eee;
+
+}
+
+
+
+tbody tr:hover {
+
+  background:#fff7f0;
+
+}
+
+
+
+/* ===================================
+   QUICK ACTIONS
+=================================== */
+
+
+.quick-actions {
+
+  background:white;
+
+  padding:25px;
+
+  margin-top:30px;
+
+  border-radius:15px;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+}
+
+
+
+.action-buttons {
+
+  display:flex;
+
+  gap:15px;
+
+  flex-wrap:wrap;
+
+}
+
+
+
+.action-buttons button {
+
+  background:#ff6b00;
+
+  color:white;
+
+  border:none;
+
+  padding:12px 22px;
+
+  border-radius:8px;
+
+  cursor:pointer;
+
+}
+
+
+
+.action-buttons button:hover {
+
+  background:#e65c00;
+
+}
+
+
+
+/* ===================================
+   MOBILE RESPONSIVE
+=================================== */
+
+
+@media(max-width:768px){
+
+
+.sidebar {
+
+  position:relative;
+
+  width:100%;
+
+  min-width:100%;
+
+  height:auto;
+
+}
+
+
+
+.admin-dashboard {
+
+  flex-direction:column;
+
+}
+
+
+
+.dashboard-content {
+
+  margin-left:0;
+
+  width:100%;
+
+  padding:15px;
+
+}
+
+
+
+.dashboard-pages {
+
+  width:100%;
+
+}
+
+
+
+.dashboard-page {
+
+  min-width:100%;
+
+}
+
+
+
+.cards {
+
+  grid-template-columns:1fr;
+
+}
+
+
+
+.dashboard-header {
+
+  flex-direction:column;
+
+  align-items:flex-start;
+
+}
+
+
+
+.action-buttons {
+
+  flex-direction:column;
+
+}
+
+
+
+.action-buttons button {
+
+  width:100%;
+
+}
+
+
+}

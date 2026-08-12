@@ -1,0 +1,259 @@
+/* =========================================
+   RESERVATION PAGE
+========================================= */
+
+.reservation-container {
+  width: 100%;
+  min-height: 600px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 60px 20px;
+  box-sizing: border-box;
+
+  background: #f7f8f3;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.reservation-container h2 {
+  width: 100%;
+  max-width: 850px;
+
+  margin: 0 0 30px;
+
+  text-align: center;
+
+  font-size: 34px;
+  font-weight: 800;
+
+  color: #172033;
+}
+
+
+/* =========================================
+   RESERVATION FORM BOX
+========================================= */
+
+.reservation-container form {
+  width: 100%;
+  max-width: 850px;
+
+  background: #ffffff;
+
+  padding: 35px;
+
+  border-radius: 20px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.12);
+
+  border: 1px solid #e5e5e5;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   INPUTS + SELECTS
+========================================= */
+
+.reservation-container input,
+.reservation-container select {
+  width: 100%;
+
+  height: 55px;
+
+  padding: 0 16px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d5d5d5;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #222;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition: 0.25s;
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+.reservation-container input::placeholder {
+  color: #888;
+}
+
+
+/* =========================================
+   FOCUS
+========================================= */
+
+.reservation-container input:focus,
+.reservation-container select:focus {
+  border-color: #ff6b00;
+
+  box-shadow:
+    0 0 0 3px rgba(255, 107, 0, 0.12);
+}
+
+
+/* =========================================
+   RESERVE BUTTON
+========================================= */
+
+.reserve-btn {
+  grid-column: 1 / -1;
+
+  width: 100%;
+
+  height: 58px;
+
+  margin-top: 5px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #ff6b00;
+
+  color: white;
+
+  font-size: 19px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.reserve-btn:hover {
+  background: #e85f00;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(255, 107, 0, 0.25);
+}
+
+
+.reserve-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   SUCCESS / ERROR MESSAGE
+========================================= */
+
+.reservation-message {
+  width: 100%;
+  max-width: 850px;
+
+  box-sizing: border-box;
+
+  margin: 0 0 20px;
+
+  padding: 14px 18px;
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  color: #333;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 700px) {
+
+  .reservation-container {
+    padding: 40px 15px;
+  }
+
+  .reservation-container h2 {
+    font-size: 28px;
+
+    margin-bottom: 25px;
+  }
+
+  .reservation-container form {
+    grid-template-columns: 1fr;
+
+    padding: 25px;
+
+    gap: 16px;
+
+    border-radius: 16px;
+  }
+
+  .reserve-btn {
+    grid-column: auto;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .reservation-container {
+    padding: 30px 12px;
+  }
+
+  .reservation-container h2 {
+    font-size: 24px;
+  }
+
+  .reservation-container form {
+    padding: 20px;
+  }
+
+  .reservation-container input,
+  .reservation-container select {
+    height: 52px;
+
+    font-size: 15px;
+  }
+
+  .reserve-btn {
+    height: 54px;
+
+    font-size: 17px;
+  }
+}

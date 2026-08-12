@@ -1,0 +1,62 @@
+.floating-cart{
+    position:fixed;
+    bottom:20px;
+     right: 20px;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#ff9800;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+    z-index: 1000;
+    animation:pulse 1.5s infinite;
+    transition:.3s;
+}
+
+.floating-cart:hover{
+    transform:scale(1.1);
+    background:#e65100;
+}
+
+.cart-icon{
+    font-size:30px;
+    color:white;
+}
+
+.cart-count{
+    position:absolute;
+    top:-5px;
+    right:-5px;
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    background:red;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:15px;
+    font-weight:bold;
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+        box-shadow:0 0 0 0 rgba(255,152,0,.6);
+    }
+
+    70%{
+        transform:scale(1.1);
+        box-shadow:0 0 0 15px rgba(255,152,0,0);
+    }
+
+    100%{
+        transform:scale(1);
+        box-shadow:0 0 0 0 rgba(255,152,0,0);
+    }
+
+}

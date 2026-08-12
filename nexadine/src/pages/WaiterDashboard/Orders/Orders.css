@@ -1,0 +1,366 @@
+.waiter-orders {
+  width: 100%;
+}
+
+/* Header */
+
+.orders-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.orders-page-header h1 {
+  margin: 0;
+
+  font-size: 30px;
+
+  color: #1f2937;
+}
+
+.orders-page-header p {
+  margin-top: 6px;
+
+  color: #6b7280;
+}
+
+.orders-refresh-btn {
+  border: none;
+
+  background: #ff6600;
+
+  color: white;
+
+  padding: 11px 18px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.orders-refresh-btn:hover {
+  background: #e55b00;
+}
+
+/* Count Cards */
+
+.orders-count-card {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.orders-count-card > div {
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.orders-count-card span {
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+.orders-count-card strong {
+  font-size: 25px;
+
+  color: #1f2937;
+}
+
+/* Container */
+
+.waiter-orders-container {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+/* Order Card */
+
+.waiter-order-card {
+  background: white;
+
+  border-radius: 12px;
+
+  padding: 22px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Order Header */
+
+.order-card-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.order-card-header h3 {
+  margin: 0 0 5px;
+
+  color: #1f2937;
+}
+
+.order-card-header span {
+  font-size: 13px;
+
+  color: #6b7280;
+}
+
+/* Status */
+
+.order-status {
+  padding: 7px 13px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.order-status.pending {
+  background: #fff7ed;
+
+  color: #c2410c;
+}
+
+.order-status.preparing {
+  background: #eff6ff;
+
+  color: #2563eb;
+}
+
+.order-status.ready {
+  background: #ecfdf5;
+
+  color: #059669;
+}
+
+.order-status.completed {
+  background: #f3f4f6;
+
+  color: #374151;
+}
+
+/* Information */
+
+.customer-info,
+.order-food {
+  padding: 18px 0;
+
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.customer-info h4,
+.order-food h4 {
+  margin: 0 0 10px;
+
+  color: #374151;
+}
+
+.customer-info p,
+.order-food p {
+  margin: 6px 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+/* Payment */
+
+.order-payment {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-payment div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.order-payment span {
+  font-size: 13px;
+
+  color: #6b7280;
+}
+
+.order-payment strong {
+  color: #374151;
+}
+
+.payment-paid {
+  color: #059669 !important;
+}
+
+.payment-pending {
+  color: #d97706 !important;
+}
+
+.order-total {
+  color: #ff6600 !important;
+
+  font-size: 18px;
+}
+
+/* Actions */
+
+.order-actions {
+  padding-top: 18px;
+}
+
+.order-actions > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-weight: 600;
+
+  color: #374151;
+}
+
+.status-buttons {
+  display: flex;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+
+.status-buttons button {
+  border: 1px solid #d1d5db;
+
+  background: white;
+
+  color: #374151;
+
+  padding: 9px 14px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.status-buttons button:hover {
+  border-color: #ff6600;
+
+  color: #ff6600;
+}
+
+.status-buttons button.selected {
+  background: #ff6600;
+
+  border-color: #ff6600;
+
+  color: white;
+}
+
+.status-buttons button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+/* Empty */
+
+.no-orders {
+  background: white;
+
+  text-align: center;
+
+  padding: 70px 20px;
+
+  border-radius: 12px;
+
+  color: #6b7280;
+}
+
+.no-orders div {
+  font-size: 50px;
+}
+
+.no-orders h2 {
+  color: #374151;
+
+  margin-bottom: 5px;
+}
+
+/* Loading */
+
+.orders-loading {
+  background: white;
+
+  padding: 50px;
+
+  text-align: center;
+
+  border-radius: 12px;
+
+  color: #6b7280;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .orders-count-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .order-payment {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .orders-page-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .orders-count-card {
+    grid-template-columns: 1fr;
+  }
+}

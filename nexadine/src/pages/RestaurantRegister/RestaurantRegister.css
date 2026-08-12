@@ -1,0 +1,333 @@
+/* =========================================
+   RESTAURANT REGISTER PAGE
+========================================= */
+
+.restaurant-register-page {
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("../../assets/images/partner-bg.png");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  padding: 60px 20px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.restaurant-register-container {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  background: white;
+
+  border-radius: 25px;
+
+  padding: 45px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.restaurant-register-header {
+  text-align: center;
+
+  margin-bottom: 35px;
+}
+
+.restaurant-register-header h1 {
+  margin: 0 0 12px;
+
+  color: #172033;
+
+  font-size: 42px;
+
+  font-weight: 800;
+}
+
+.restaurant-register-header p {
+  margin: 0;
+
+  color: #687386;
+
+  font-size: 17px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.restaurant-register-form {
+  width: 100%;
+}
+
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.restaurant-register-form h2 {
+  margin: 30px 0 20px;
+
+  color: #172033;
+
+  font-size: 23px;
+
+  font-weight: 700;
+
+  border-left: 5px solid #3c8f20;
+
+  padding-left: 12px;
+}
+
+
+/* =========================================
+   FORM ROW
+========================================= */
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+
+  color: #172033;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d7dce3;
+
+  border-radius: 10px;
+
+  background: #fff;
+
+  color: #172033;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition: 0.25s;
+}
+
+.form-group input {
+  height: 50px;
+}
+
+.form-group textarea {
+  min-height: 110px;
+
+  resize: vertical;
+
+  font-family: inherit;
+}
+
+
+/* =========================================
+   INPUT FOCUS
+========================================= */
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #3c8f20;
+
+  box-shadow:
+    0 0 0 3px rgba(60, 143, 32, 0.12);
+}
+
+
+/* =========================================
+   REGISTER BUTTON
+========================================= */
+
+.restaurant-submit-btn {
+  width: 100%;
+
+  border: none;
+
+  margin-top: 20px;
+
+  padding: 17px;
+
+  border-radius: 12px;
+
+  background: #3c8f20;
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.restaurant-submit-btn:hover {
+  background: #2f7518;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   LOGIN
+========================================= */
+
+.back-login {
+  text-align: center;
+
+  margin: 22px 0 15px;
+
+  color: #687386;
+
+  font-size: 15px;
+}
+
+.back-login a {
+  color: #3c8f20;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  margin-left: 5px;
+}
+
+.back-login a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   BACK HOME
+========================================= */
+
+.back-home-btn {
+  display: block;
+
+  margin: 0 auto;
+
+  border: none;
+
+  background: transparent;
+
+  color: #555;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+.back-home-btn:hover {
+  color: #3c8f20;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+  .restaurant-register-container {
+    padding: 30px;
+  }
+
+  .restaurant-register-header h1 {
+    font-size: 34px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+  .restaurant-register-page {
+    padding: 25px 12px;
+  }
+
+  .restaurant-register-container {
+    padding: 22px 18px;
+
+    border-radius: 18px;
+  }
+
+  .restaurant-register-header h1 {
+    font-size: 28px;
+  }
+
+  .restaurant-register-header p {
+    font-size: 15px;
+  }
+
+  .restaurant-register-form h2 {
+    font-size: 20px;
+  }
+
+}

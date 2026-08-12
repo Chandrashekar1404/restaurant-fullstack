@@ -1,0 +1,92 @@
+.settings{
+    padding:30px;
+    background:#f5f7fb;
+    min-height:100vh;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.settings h1{
+    margin-bottom:30px;
+    color:#222;
+}
+
+.settings-container{
+    max-width:900px;
+    background:white;
+    margin:auto;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.settings-form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    margin-bottom:8px;
+    font-weight:bold;
+    color:#444;
+}
+
+.form-group input,
+.form-group textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    border-color:#ff6b00;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.save-btn{
+    background:#ff6b00;
+    color:white;
+    border:none;
+    padding:15px;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.save-btn:hover{
+    background:#e65c00;
+}
+
+@media(max-width:768px){
+
+.settings{
+    padding:15px;
+}
+
+.settings-container{
+    padding:20px;
+}
+
+.form-row{
+    grid-template-columns:1fr;
+}
+
+.save-btn{
+    width:100%;
+}
+
+}

@@ -1,0 +1,35 @@
+.orders {
+  padding: 30px;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+.orders h1 {
+  text-align: center;
+  color: #C89B3C;
+  margin-bottom: 25px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #C89B3C;
+  color: white;
+}
+
+tr:hover {
+  background: #f8f8f8;
+}

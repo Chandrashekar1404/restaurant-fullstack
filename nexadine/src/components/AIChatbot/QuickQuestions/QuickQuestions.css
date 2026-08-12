@@ -1,0 +1,33 @@
+.quick-questions {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 12px;
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
+    
+}
+
+.quick-questions::-webkit-scrollbar {
+    display: none;
+}
+
+.question-chip {
+    white-space: nowrap;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 20px;
+    background: #fff4ec;
+    color: #ff6b00;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    flex-shrink: 0;
+}
+
+.question-chip:hover {
+    background: #ff6b00;
+    color: white;
+    transform: translateY(-2px);
+}

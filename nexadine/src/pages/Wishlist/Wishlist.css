@@ -1,0 +1,18 @@
+.wishlist{
+    padding:80px;
+    text-align:center;
+}
+
+.wishlist-empty{
+    margin-top:60px;
+}
+
+.wishlist button{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    background:#ff9800;
+    color:#fff;
+    border-radius:8px;
+    cursor:pointer;
+}

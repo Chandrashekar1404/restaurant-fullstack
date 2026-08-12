@@ -1,0 +1,96 @@
+.best-seller {
+  padding: 80px 6%;
+  background: #fff;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading h2 {
+  font-size: 40px;
+  color: #222;
+}
+
+.section-heading p {
+  color: #666;
+  margin-top: 10px;
+}
+
+.best-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.best-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  transition: 0.3s;
+}
+
+.best-card:hover {
+  transform: translateY(-8px);
+}
+
+.best-image {
+  position: relative;
+}
+
+.best-image img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #ff5722;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.best-content {
+  padding: 20px;
+}
+
+.best-content h3 {
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.rating {
+  color: #ff9800;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.best-content h4 {
+  color: #3c7c22;
+  margin-bottom: 18px;
+  font-size: 24px;
+}
+
+.best-content button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: #3c7c22;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.best-content button:hover {
+  background: #2f631b;
+}

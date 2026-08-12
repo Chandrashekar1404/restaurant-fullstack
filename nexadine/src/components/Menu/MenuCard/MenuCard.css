@@ -1,0 +1,113 @@
+.menu-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,.12);
+  transition: .3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,.18);
+}
+
+.menu-image {
+  position: relative;
+}
+
+.menu-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.rating {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.menu-content {
+  padding: 18px;
+}
+
+.menu-content h3 {
+  margin-bottom: 8px;
+}
+
+.menu-content p {
+  color: #666;
+  font-size: 14px;
+  min-height: 45px;
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.veg,
+.nonveg,
+.spicy {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.veg {
+  background: #d4edda;
+  color: green;
+}
+
+.nonveg {
+  background: #ffe5e5;
+  color: #b00020;
+}
+
+.spicy {
+  background: #fff3cd;
+  color: #ff6b00;
+}
+
+.menu-content h2 {
+  color: #ff6b00;
+  margin-bottom: 15px;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-btn,
+.cart-btn {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.details-btn {
+  background: #eee;
+}
+
+.cart-btn {
+  background: #ff6b00;
+  color: white;
+}
+
+.details-btn:hover {
+  background: #ddd;
+}
+
+.cart-btn:hover {
+  background: #e55b00;
+}

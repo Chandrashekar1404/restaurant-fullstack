@@ -1,0 +1,49 @@
+.settings-page{
+    width:100%;
+}
+
+.settings-page h1{
+    margin-bottom:30px;
+}
+
+.settings-card{
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.setting-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    padding-bottom:15px;
+    border-bottom:1px solid #eee;
+}
+
+.setting-item label{
+    font-size:18px;
+    font-weight:600;
+}
+
+.setting-item input{
+    width:22px;
+    height:22px;
+    cursor:pointer;
+}
+
+.settings-card button{
+    margin-top:20px;
+    padding:12px 30px;
+    background:#ff6b00;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.settings-card button:hover{
+    background:#e55d00;
+}

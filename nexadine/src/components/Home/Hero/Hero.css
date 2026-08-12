@@ -1,0 +1,504 @@
+/* =====================================================
+   HERO MAIN
+===================================================== */
+
+.hero {
+  width: 100%;
+  height: 700px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: #111;
+}
+
+
+/* =====================================================
+   PARTNER IMAGE SECTION
+===================================================== */
+
+.partner-hero {
+  width: 100%;
+  height: 700px;
+
+  position: relative;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   DARK OVERLAY
+===================================================== */
+
+.partner-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  z-index: 1;
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+  position: absolute;
+
+  z-index: 5;
+
+  top: 70px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 90%;
+  max-width: 950px;
+
+  text-align: center;
+
+  color: white;
+}
+
+
+/* =====================================================
+   HERO TAG
+===================================================== */
+
+.hero-tag {
+  display: inline-block;
+
+  padding: 12px 25px;
+
+  margin-bottom: 20px;
+
+  border-radius: 30px;
+
+  background: #3c8f20;
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   HERO TITLE
+===================================================== */
+
+.hero-content h1 {
+  margin: 0 0 20px;
+
+  color: white;
+
+  font-size: 52px;
+
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  text-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.8);
+}
+
+
+/* =====================================================
+   HERO DESCRIPTION
+===================================================== */
+
+.hero-content p {
+  margin: 0 0 25px;
+
+  color: white;
+
+  font-size: 19px;
+
+  line-height: 1.6;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
+
+.hero-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+/* BUTTON */
+
+.order-btn,
+.book-btn {
+  border: none;
+
+  padding: 15px 32px;
+
+  border-radius: 35px;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+/* ORDER */
+
+.order-btn {
+  background: #3c8f20;
+
+  color: white;
+}
+
+
+/* BOOK */
+
+.book-btn {
+  background: white;
+
+  color: #222;
+}
+
+
+/* HOVER */
+
+.order-btn:hover,
+.book-btn:hover {
+  transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   RESTAURANT PARTNER
+===================================================== */
+
+.restaurant-partner {
+  position: absolute;
+
+  z-index: 5;
+
+  left: 50%;
+
+  bottom: 25px;
+
+  transform: translateX(-50%);
+
+  width: 850px;
+
+  max-width: 90%;
+
+  padding: 20px 30px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.78);
+
+  border-radius: 20px;
+
+  color: white;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =====================================================
+   PARTNER TITLE
+===================================================== */
+
+.restaurant-partner h2 {
+  margin: 0 0 5px;
+
+  color: white;
+
+  font-size: 27px;
+}
+
+
+/* =====================================================
+   PARTNER DESCRIPTION
+===================================================== */
+
+.restaurant-partner p {
+  margin: 0 0 15px;
+
+  color: #eee;
+
+  font-size: 15px;
+}
+
+
+/* =====================================================
+   PARTNER OFFER
+===================================================== */
+
+.partner-offer {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 15px;
+
+  padding: 10px 22px;
+
+  border-radius: 40px;
+
+  background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =====================================================
+   OFFER ICON
+===================================================== */
+
+.offer-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #2878e8;
+
+  color: white;
+
+  font-size: 21px;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   OFFER TEXT
+===================================================== */
+
+.partner-offer strong {
+  display: block;
+
+  color: white;
+
+  font-size: 16px;
+}
+
+
+.partner-offer span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #ddd;
+
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   PARTNER BUTTON
+===================================================== */
+
+.partner-btn {
+  display: block;
+
+  margin: 0 auto;
+
+  padding: 13px 30px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #2878e8;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.partner-btn:hover {
+  background: #1765d1;
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   ADVERTISEMENT VIDEO
+===================================================== */
+
+.advertisement-video {
+  width: 100%;
+  height: 700px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: black;
+}
+
+
+/* =====================================================
+   VIDEO
+===================================================== */
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .hero,
+  .partner-hero,
+  .advertisement-video {
+    height: 650px;
+  }
+
+  .hero-content {
+    top: 55px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .restaurant-partner {
+    width: 90%;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .hero,
+  .partner-hero,
+  .advertisement-video {
+    height: 700px;
+  }
+
+  .hero-content {
+    top: 40px;
+
+    width: 92%;
+  }
+
+  .hero-tag {
+    font-size: 14px;
+
+    padding: 10px 18px;
+  }
+
+  .hero-content h1 {
+    font-size: 31px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .order-btn,
+  .book-btn {
+    width: 210px;
+  }
+
+  .restaurant-partner {
+    bottom: 15px;
+
+    width: 94%;
+
+    padding: 15px;
+  }
+
+  .restaurant-partner h2 {
+    font-size: 21px;
+  }
+
+  .restaurant-partner p {
+    font-size: 13px;
+  }
+
+  .partner-offer {
+    padding: 8px 15px;
+  }
+
+  .offer-icon {
+    width: 35px;
+    height: 35px;
+
+    font-size: 18px;
+  }
+
+  .partner-offer strong {
+    font-size: 13px;
+  }
+
+  .partner-offer span {
+    font-size: 10px;
+  }
+
+  .partner-btn {
+    font-size: 14px;
+
+    padding: 11px 24px;
+  }
+}

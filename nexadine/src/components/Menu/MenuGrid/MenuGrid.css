@@ -1,0 +1,23 @@
+.menu-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.no-food {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.no-food h2 {
+  color: #ff6b00;
+  margin-bottom: 10px;
+}
+
+.no-food p {
+  color: #666;
+  font-size: 16px;
+}
