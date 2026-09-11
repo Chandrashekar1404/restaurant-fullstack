@@ -100,13 +100,13 @@ public class SecurityConfig {
             // Authentication provider
             .authenticationProvider(
                     authenticationProvider
-            )
+                )
 
-            // =================================================
-            // AUTHORIZATION
-            // =================================================
+                // =================================================
+                // AUTHORIZATION
+                // =================================================
 
-            .authorizeHttpRequests(auth -> auth
+                .authorizeHttpRequests(auth -> auth
 
                 // OPTIONS / CORS
                 .requestMatchers(
@@ -124,6 +124,11 @@ public class SecurityConfig {
                         "/api/payment/**"
                 ).permitAll()
 
+                // ADMIN USER MANAGEMENT
+                .requestMatchers(
+                        "/api/users/**"
+                ).hasRole("ADMIN")
+
                 // ORDERS
                 // Customer must be logged in
                 .requestMatchers(
@@ -138,7 +143,7 @@ public class SecurityConfig {
 
                 // Everything else
                 .anyRequest().authenticated()
-            )
+                )
 
             // =================================================
             // JWT FILTER

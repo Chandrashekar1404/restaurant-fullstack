@@ -1,6 +1,9 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import RestaurantRegister
-  from "../pages/RestaurantRegister/RestaurantRegister";
+import RestaurantRegister from "../pages/RestaurantRegister/RestaurantRegister";
+import ProtectedRoute from "./ProtectedRoute";
+
+
+
 // =====================================================
 // CUSTOMER LAYOUT
 // =====================================================
@@ -229,7 +232,11 @@ function AppRoutes() {
 
       <Route
         path="/admin"
-        element={<AdminLayout />}
+        element={
+          <ProtectedRoute allowedRoles={["ADMIN"]}>
+            <AdminLayout />
+          </ProtectedRoute>
+        }
       >
 
         {/* =================================================

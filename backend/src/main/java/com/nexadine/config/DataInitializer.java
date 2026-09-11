@@ -18,50 +18,22 @@ public class DataInitializer {
 
         return args -> {
 
-            // =========================
-            // ADMIN - SHIVA
-            // =========================
+           if (!userRepository.existsByEmail("admin@email.com")) {
 
-            if (!userRepository.existsByEmail(
-                    "panugantyshivakumar043@gmail.com")) {
+                User admin = new User();
 
-                User shiva = new User();
+                admin.setFullName("Admin");
+                admin.setEmail("admin@email.com");
+                admin.setPhone("9999999999");
 
-                shiva.setFullName("Shiva");
-                shiva.setEmail(
-                        "panugantyshivakumar043@gmail.com");
-                shiva.setPhone("9391104651");
+                admin.setPassword(
+                        passwordEncoder.encode("admin123")
+                );
 
-                shiva.setPassword(
-                        passwordEncoder.encode("shiva1234"));
+                admin.setRole("ADMIN");
 
-                shiva.setRole("ADMIN");
-
-                userRepository.save(shiva);
-            }
-
-
-            // =========================
-            // ADMIN - ANIKETH
-            // =========================
-
-            if (!userRepository.existsByEmail(
-                    "shaktianiketh36@gmail.com")) {
-
-                User aniketh = new User();
-
-                aniketh.setFullName("Aniketh");
-                aniketh.setEmail(
-                        "shaktianiketh36@gmail.com");
-                aniketh.setPhone("6304394545");
-
-                aniketh.setPassword(
-                        passwordEncoder.encode("aniketh1234"));
-
-                aniketh.setRole("ADMIN");
-
-                userRepository.save(aniketh);
-            }
+                userRepository.save(admin);
+                }
 
 
             // =========================

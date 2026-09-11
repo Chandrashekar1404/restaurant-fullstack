@@ -1,5 +1,6 @@
 import "./AdminDashboard.css";
 
+
 import {
   FaShoppingBag,
   FaUtensils,
@@ -18,6 +19,7 @@ import {
 
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import API from "../../api/axiosConfig";
 
 function AdminDashboard() {
 
@@ -43,62 +45,38 @@ function AdminDashboard() {
     try {
 
       const [
-        ordersResponse,
-        customersResponse,
-        reservationsResponse
-      ] = await Promise.all([
+              ordersResponse,
+              customersResponse,
+              reservationsResponse
+            ] = await Promise.all([
+              API.get("/orders"),
+              API.get("/users"),
+              API.get("/reservations")
+            ]);
 
-        fetch("http://localhost:8081/api/orders"),
+            // ==========================
+            // ORDERS
+            // ==========================
 
-        fetch("http://localhost:8081/api/users"),
+            if (ordersResponse.status === 200) {
+              setOrders(ordersResponse.data || []);
+            }
 
-        fetch("http://localhost:8081/api/reservations")
+            // ==========================
+            // CUSTOMERS
+            // ==========================
 
-      ]);
+            if (customersResponse.status === 200) {
+              setCustomers(customersResponse.data || []);
+            }
 
+            // ==========================
+            // RESERVATIONS
+            // ==========================
 
-      // ==========================
-      // ORDERS
-      // ==========================
-
-      if (ordersResponse.ok) {
-
-        const ordersData =
-          await ordersResponse.json();
-
-        setOrders(ordersData || []);
-
-      }
-
-
-      // ==========================
-      // CUSTOMERS
-      // ==========================
-
-      if (customersResponse.ok) {
-
-        const customersData =
-          await customersResponse.json();
-
-        setCustomers(customersData || []);
-
-      }
-
-
-      // ==========================
-      // RESERVATIONS
-      // ==========================
-
-      if (reservationsResponse.ok) {
-
-        const reservationsData =
-          await reservationsResponse.json();
-
-        setReservations(
-          reservationsData || []
-        );
-
-      }
+            if (reservationsResponse.status === 200) {
+              setReservations(reservationsResponse.data || []);
+            }
 
 
       setLastUpdated(new Date());

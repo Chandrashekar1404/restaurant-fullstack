@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./PaymentHistory.css";
+import API from "../../../api/axiosConfig";
 
 function PaymentHistory() {
   const [payments, setPayments] = useState([]);
@@ -22,7 +23,6 @@ function PaymentHistory() {
 
   const loadPaymentHistory = async () => {
     const customerId = localStorage.getItem("userId");
-    const token = localStorage.getItem("token");
 
     if (!customerId) {
       setPayments([]);
@@ -31,30 +31,11 @@ function PaymentHistory() {
     }
 
     try {
-      const response = await fetch(
-        `http://localhost:8081/api/orders/customer/${customerId}`,
-        {
-          method: "GET",
-
-          headers: {
-            "Content-Type": "application/json",
-
-            ...(token
-              ? {
-                  Authorization: `Bearer ${token}`,
-                }
-              : {}),
-          },
-        }
+      const response = await API.get(
+        `/orders/customer/${customerId}`
       );
 
-      if (!response.ok) {
-        throw new Error(
-          "Failed to load payment history"
-        );
-      }
-
-      const data = await response.json();
+      const data = response.data;
 
       console.log(
         "CUSTOMER PAYMENT HISTORY:",

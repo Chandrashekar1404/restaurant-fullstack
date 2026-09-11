@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./MyOrders.css";
+import API from "../../../api/axiosConfig";
 
 function MyOrders() {
   const [orders, setOrders] = useState([]);
@@ -17,47 +18,31 @@ function MyOrders() {
   }, []);
 
   const loadOrders = async () => {
-    const customerId = localStorage.getItem("userId");
-    const token = localStorage.getItem("token");
+  const customerId = localStorage.getItem("userId");
 
-    if (!customerId) {
-      setOrders([]);
-      setLoading(false);
-      return;
-    }
+  if (!customerId) {
+    setOrders([]);
+    setLoading(false);
+    return;
+  }
 
-    try {
-      const response = await fetch(
-        `http://localhost:8081/api/orders/customer/${customerId}`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            ...(token
-              ? {
-                  Authorization: `Bearer ${token}`,
-                }
-              : {}),
-          },
-        }
-      );
+  try {
+    const response = await API.get(
+      `/orders/customer/${customerId}`
+    );
 
-      if (!response.ok) {
-        throw new Error("Failed to load orders");
-      }
+    const data = response.data;
 
-      const data = await response.json();
+    console.log("CUSTOMER ORDERS:", data);
 
-      console.log("CUSTOMER ORDERS:", data);
-
-      setOrders(Array.isArray(data) ? data : []);
-    } catch (error) {
-      console.error("ORDER ERROR:", error);
-      setOrders([]);
-    } finally {
-      setLoading(false);
-    }
-  };
+    setOrders(Array.isArray(data) ? data : []);
+  } catch (error) {
+    console.error("ORDER ERROR:", error);
+    setOrders([]);
+  } finally {
+    setLoading(false);
+  }
+};
 
   const getStatusClass = (status) => {
     if (!status) {
